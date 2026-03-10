@@ -1,0 +1,30 @@
+{
+  "event_type": "POSITIONS_SNAPSHOT",
+  "source": "robinhood-sync",
+  "timestamp": "2026-03-10T14:30:00Z",
+  "data": {
+    "positions": [
+      {
+        "symbol": "PLTR",
+        "quantity": "25",
+        "average_buy_price": "42.50",
+        "equity": "1125.00",
+        "percent_change": "5.88",
+        "equity_change": "62.50",
+        "updated_at": "2026-03-10T14:30:00Z"
+      },
+      {
+        "symbol": "AAPL",
+        "quantity": "3",
+        "average_buy_price": "175.50",
+        "equity": "540.00",
+        "percent_change": "2.56",
+        "equity_change": "13.50",
+        "updated_at": "2026-03-10T14:30:00Z"
+      }
+    ],
+    "buying_power": "234.50",
+    "cash": "234.50",
+    "total_equity": "1899.50"
+  }
+}

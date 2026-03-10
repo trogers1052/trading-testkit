@@ -1,0 +1,60 @@
+{
+  "event_type": "DECISION",
+  "source": "decision-engine",
+  "schema_version": "1.0",
+  "timestamp": "2026-03-10T14:30:00Z",
+  "data": {
+    "symbol": "AAPL",
+    "signal": "BUY",
+    "confidence": 0.85,
+    "primary_reasoning": "RSI oversold bounce with volume confirmation",
+    "rules_triggered": [
+      {
+        "rule_name": "MomentumReversalRule",
+        "confidence": 0.82,
+        "reasoning": "RSI crossed above 30 with increasing volume"
+      }
+    ],
+    "indicators_snapshot": {
+      "rsi_14": 32.5,
+      "macd": -0.15,
+      "sma_20": 178.50,
+      "atr_14": 3.20
+    },
+    "metadata": {
+      "regime_id": "BULL"
+    },
+    "trade_plan": {
+      "setup_type": "oversold_bounce",
+      "rules_contributed": ["MomentumReversalRule"],
+      "entry_price": 175.50,
+      "entry_zone_low": 174.80,
+      "entry_zone_high": 176.20,
+      "valid_until": "2026-03-11T16:00:00Z",
+      "stop_price": 169.10,
+      "stop_method": "atr",
+      "stop_pct": 3.65,
+      "target_1": 188.30,
+      "target_2": 194.90,
+      "risk_reward_ratio": 2.0,
+      "shares": 3,
+      "dollar_risk": 19.20,
+      "risk_pct": 1.92,
+      "position_value": 526.50,
+      "invalidation_price": 168.00,
+      "plan_valid": true
+    },
+    "checklist": {
+      "stop_loss_defined": true,
+      "position_sized_correctly": true,
+      "rr_ratio_acceptable": true,
+      "no_earnings_imminent": true,
+      "regime_compatible": true,
+      "all_checks_passed": true,
+      "status": "GO",
+      "regime_id": "BULL",
+      "risk_pct": 1.92,
+      "rr_ratio": 2.0
+    }
+  }
+}

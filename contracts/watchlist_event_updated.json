@@ -1,0 +1,25 @@
+{
+  "event_type": "WATCHLIST_UPDATED",
+  "source": "robinhood-sync",
+  "timestamp": "2026-03-10T14:00:00Z",
+  "data": {
+    "added_symbols": ["NVDA", "AMD"],
+    "removed_symbols": ["INTC"],
+    "all_symbols": ["AAPL", "NVDA", "AMD", "PLTR"],
+    "total_count": 4,
+    "stocks": [
+      {
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "instrument_url": "https://api.robinhood.com/instruments/1/",
+        "added_at": "2026-01-15T10:00:00Z"
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "instrument_url": "https://api.robinhood.com/instruments/2/",
+        "added_at": "2026-03-10T14:00:00Z"
+      }
+    ]
+  }
+}

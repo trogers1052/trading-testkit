@@ -1,0 +1,40 @@
+{
+  "event_type": "RANKING",
+  "source": "decision-engine",
+  "schema_version": "1.0",
+  "timestamp": "2026-03-10T14:30:00Z",
+  "data": {
+    "signal_type": "BUY",
+    "criteria": "composite_score",
+    "timestamp": "2026-03-10T14:30:00Z",
+    "total_symbols": 3,
+    "rankings": [
+      {
+        "symbol": "NVDA",
+        "rank": 1,
+        "score": 0.92,
+        "signal_type": "BUY",
+        "confidence": 0.88,
+        "reasoning": "Strongest momentum in semiconductor sector",
+        "ranking_factors": {
+          "confidence": 0.88,
+          "volume_ratio": 1.5,
+          "rsi_distance": 15.0
+        }
+      },
+      {
+        "symbol": "AMD",
+        "rank": 2,
+        "score": 0.78,
+        "signal_type": "BUY",
+        "confidence": 0.72,
+        "reasoning": "Pullback to support with volume",
+        "ranking_factors": {
+          "confidence": 0.72,
+          "volume_ratio": 1.2,
+          "rsi_distance": 10.0
+        }
+      }
+    ]
+  }
+}
