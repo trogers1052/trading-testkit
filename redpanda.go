@@ -4,6 +4,7 @@ import (
 	"context"
 	"testing"
 
+	"github.com/IBM/sarama"
 	"github.com/testcontainers/testcontainers-go"
 	tcredpanda "github.com/testcontainers/testcontainers-go/modules/redpanda"
 )
@@ -67,6 +68,26 @@ func NewRedpandaContainer(t *testing.T, opts ...RedpandaOption) *RedpandaContain
 	t.Cleanup(func() { rc.Cleanup(t) })
 
 	return rc
+}
+
+// CreateTopic creates a Kafka topic via the Sarama admin client.
+func (rc *RedpandaContainer) CreateTopic(t *testing.T, topic string, partitions int) {
+	t.Helper()
+
+	cfg := sarama.NewConfig()
+	admin, err := sarama.NewClusterAdmin([]string{rc.Brokers}, cfg)
+	if err != nil {
+		t.Fatalf("testkit: failed to create admin client: %v", err)
+	}
+	defer admin.Close()
+
+	err = admin.CreateTopic(topic, &sarama.TopicDetail{
+		NumPartitions:     int32(partitions),
+		ReplicationFactor: 1,
+	}, false)
+	if err != nil {
+		t.Fatalf("testkit: failed to create topic %s: %v", topic, err)
+	}
 }
 
 // Cleanup terminates the Redpanda container.
