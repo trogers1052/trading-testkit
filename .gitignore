@@ -1,0 +1,13 @@
+# Test and coverage artifacts
+*.out
+*.test
+
+# OS files
+.DS_Store
+
+# Vendored dependencies
+vendor/
+
+# Go workspace files
+go.work
+go.work.sum
