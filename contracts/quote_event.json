@@ -1,6 +1,6 @@
 {
   "event_type": "QUOTE_UPDATE",
-  "source": "polygon",
+  "source": "alpaca",
   "timestamp": "2026-03-10T14:30:00Z",
   "schema_version": "1.0",
   "is_backfill": false,
