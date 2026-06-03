@@ -1,11 +1,11 @@
 {
-  "event_type": "RANKING",
+  "event_type": "RANKING_UPDATE",
   "source": "decision-engine",
   "schema_version": "1.0",
   "timestamp": "2026-03-10T14:30:00Z",
   "data": {
     "signal_type": "BUY",
-    "criteria": "composite_score",
+    "criteria": "composite",
     "timestamp": "2026-03-10T14:30:00Z",
     "total_symbols": 3,
     "rankings": [

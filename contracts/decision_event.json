@@ -1,7 +1,7 @@
 {
-  "event_type": "DECISION",
+  "event_type": "DECISION_UPDATE",
   "source": "decision-engine",
-  "schema_version": "1.0",
+  "schema_version": "1.2",
   "timestamp": "2026-03-10T14:30:00Z",
   "data": {
     "symbol": "AAPL",
@@ -21,8 +21,11 @@
       "sma_20": 178.50,
       "atr_14": 3.20
     },
+    "regime_id": "BULL",
+    "regime_confidence": 0.75,
     "metadata": {
-      "regime_id": "BULL"
+      "rules_evaluated": 8,
+      "rules_triggered": 1
     },
     "trade_plan": {
       "setup_type": "oversold_bounce",
